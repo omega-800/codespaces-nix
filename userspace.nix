@@ -17,15 +17,10 @@ in
 
   inherit systemPackages;
   userPackages = systemPackages ++ (with pkgs; [
-    bzip2
     direnv
     nix-direnv
     home-manager
-    lorri
     man
-    procps
-    psmisc
-    unzip
-    zip
+    vim
   ]);
 }
