@@ -4,10 +4,10 @@
 }:
 
 let
-  systemPackages = [
-    pkgs.acl
-    pkgs.git
-    pkgs.nix
+  systemPackages = with pkgs; [
+    acl
+    git
+    nix
   ];
 in
 
@@ -16,14 +16,16 @@ in
   nixpkgs = pkgs;
 
   inherit systemPackages;
-  userPackages = systemPackages ++ [
-    pkgs.bzip2
-    pkgs.direnv
-    pkgs.lorri
-    pkgs.man
-    pkgs.procps
-    pkgs.psmisc
-    pkgs.unzip
-    pkgs.zip
-  ];
+  userPackages = systemPackages ++ (with pkgs; [
+    bzip2
+    direnv
+    nix-direnv
+    home-manager
+    lorri
+    man
+    procps
+    psmisc
+    unzip
+    zip
+  ]);
 }

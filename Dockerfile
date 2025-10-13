@@ -67,8 +67,8 @@ VOLUME ["/tmp", "/run"]
 
 ARG DEBIAN
 ARG REVISION
-LABEL org.opencontainers.image.source="https://github.com/zombiezen/codespaces-nix"
-LABEL org.opencontainers.image.documentation="https://github.com/zombiezen/codespaces-nix/blob/${REVISION}/README.md"
+LABEL org.opencontainers.image.source="https://github.com/omega-800/codespaces-nix"
+LABEL org.opencontainers.image.documentation="https://github.com/omega-800/codespaces-nix/blob/${REVISION}/README.md"
 LABEL org.opencontainers.image.base.name="$DEBIAN"
 LABEL org.opencontainers.image.revision="$REVISION"
 LABEL devcontainer.metadata="{ \
