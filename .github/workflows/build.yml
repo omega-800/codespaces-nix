@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - build
-    if: github.event_name == 'release'
+    # if: github.event_name == 'release'
     steps:
       - name: Log into GitHub Container Registry
         uses: docker/login-action@v2
